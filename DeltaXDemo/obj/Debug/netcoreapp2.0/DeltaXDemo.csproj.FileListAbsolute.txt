@@ -1,0 +1,11 @@
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\bin\Debug\netcoreapp2.0\DeltaXDemo.deps.json
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\bin\Debug\netcoreapp2.0\DeltaXDemo.runtimeconfig.json
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\bin\Debug\netcoreapp2.0\DeltaXDemo.runtimeconfig.dev.json
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\bin\Debug\netcoreapp2.0\DeltaXDemo.dll
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\bin\Debug\netcoreapp2.0\DeltaXDemo.pdb
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.csprojAssemblyReference.cache
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.csproj.CoreCompileInputs.cache
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.AssemblyInfoInputs.cache
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.AssemblyInfo.cs
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.dll
+c:\users\gourab\source\repos\DeltaXDemo\DeltaXDemo\obj\Debug\netcoreapp2.0\DeltaXDemo.pdb

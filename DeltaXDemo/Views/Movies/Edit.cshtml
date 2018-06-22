@@ -1,0 +1,111 @@
+﻿@model DeltaXDemo.ViewModels.CreateEditMovieViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+<script>
+    var operation = "Edit";
+</script>
+
+<h4>Movie</h4>
+<div asp-validation-summary="All"></div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Movies" asp-action="Edit" method="post"
+              enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReleaseYear" class="control-label"></label>
+                <input asp-for="ReleaseYear" class="form-control" />
+                <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Plot" class="control-label"></label>
+                <textarea asp-for="Plot" class="form-control"></textarea>
+                <span asp-validation-for="Plot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a id="lnkAddProducer" href="javascript:void(0)">Add Producer</a>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerId" class="control-label"></label>
+                <select asp-for="ProducerId" asp-items="Model.ProducerList"></select>
+                <span asp-validation-for="ProducerId" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <a id="lnkAddActor" href="javascript:void(0)">Add Actor</a>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actors" class="control-label"></label>
+                @Html.ListBoxFor(t => t.Actors, Model.ActorList, new { })
+                <span id="actorError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Poster (Do not select if no change required)</label>
+                <input id="poster" class="form-control" type="file" name="Poster"  accept="image/gif, image/jpeg, image/png" />
+                <span id="posterError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="btnSubmit" type="submit" value="Edit" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<div id="newPerson" style="display:none">
+    <h4><strong data-bind="text: Header"></strong></h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="View">
+                <div id="errAddPerson" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input data-bind="value: Name" class="form-control" />
+                    <span id="errName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Sex</label>
+                    <select data-bind="value: Sex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Date of Birth</label>
+                    <input id="datepicker" data-bind="value: DOB" class="form-control" />
+                    <span id="errDOB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Bio</label>
+                    <input data-bind="value: Bio" class="form-control" />
+                    <span id="errBio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button value="Save" data-bind="click:ValidateAndSubmit" class="btn btn-default">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{ Html.RenderPartial("_ValidationScriptsPartial");}
+}
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="~/js/Movies.js"></script>
